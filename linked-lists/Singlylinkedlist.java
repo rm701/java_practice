@@ -136,4 +136,21 @@ public class SingleLinkedList<Item> {
         }
         System.out.println("null");
     }
+    public void addNodeInSortedOrder(Node<Item>n) {
+    	Node<Item> prev,current;
+    	prev = null;
+    	current=getHead();
+    	while(current!=null && n.compareTo(current)>0) {
+    		prev=current;
+    		current=current.getNext();}
+    	n.setNext(current);
+    	if(prev==null) {
+    		head=n;}
+    	else prev.setNext(n);
+    		
+    	}
+    	
+    	
+    	
+    
 }
