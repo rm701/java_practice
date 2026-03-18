@@ -131,7 +131,7 @@ public class SingleLinkedList<Item> {
     public void displayLinkedList() {
         Node<Item> current = head;
         while (current != null) {
-            System.out.print(current.getData() + " -> ");
+            System.out.print(current.getItem() + " -> ");
             current = current.getNext();
         }
         System.out.println("null");
@@ -149,7 +149,25 @@ public class SingleLinkedList<Item> {
     	else prev.setNext(n);
     		
     	}
+    public int countNodes() {
+    	//not using the length data member
+    	Node<Item> current=head;
+    	int counter=0;
+    	while(current!=null) {
+    		counter++;
+    		current=current.getNext();
+    	}
+    	return counter;
+    }
+    public Node<Item> getLastNode(){
+    	Node<Item> current=head;
+    	while(surrent.getNext()!=null) {
+    		current=current.getNext();
+    	}
+    	return current;
+    }
     	
+     
     	
     	
     
